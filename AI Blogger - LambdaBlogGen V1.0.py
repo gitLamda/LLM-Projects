@@ -10,6 +10,10 @@ import google.generativeai as genai
 from apikey import google_gemini_api_key, openai_api_key
 from openai import OpenAI
 
+header = {
+  "authorization": st.secrets['API_KEY'],
+  "content-type": "application/json"
+}
 client = OpenAI(api_key = openai_api_key)
 
 genai.configure(api_key=google_gemini_api_key)
