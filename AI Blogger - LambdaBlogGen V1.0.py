@@ -14,9 +14,9 @@ header = {
   "authorization": st.secrets['API_KEY'],
   "content-type": "application/json"
 }
-client = OpenAI(api_key = openai_api_key)
+client = OpenAI(api_key = API_KEY)
 
-genai.configure(api_key=google_gemini_api_key)
+genai.configure(api_key=API_KEY)
 
 generation_config = {
   "temperature": 1,
